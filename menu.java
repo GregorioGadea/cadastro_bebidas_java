@@ -144,7 +144,9 @@ public class menu {
                     break;
 
                 case "7": // Mostrando os dados de todas as bebidas
-                                
+
+                // Pedir ajuda para o professor para resolver o bug do aparecimento!
+                
                 String dadosBebidas = "";
                     for (int i = 0; i < bebidas.size(); i++){
 

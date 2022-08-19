@@ -98,66 +98,66 @@ public class menu {
                 + "Preço de venda: " + precoDaBebida );                
                 break;
             
-            case "4":
-                String descricaoDaBebida4 = bebidas.get(0).getDescricao();
-                float min = bebidas.get(0).getPrecoVenda();
-                String nomeDaBebida4 = bebidas.get(0).getNome();
+                case "4":
+                    String descricaoDaBebida4 = bebidas.get(0).getDescricao();
+                    float min = bebidas.get(0).getPrecoVenda();
+                    String nomeDaBebida4 = bebidas.get(0).getNome();
 
-                for (int i = 0; i < bebidas.size(); i++){
+                    for (int i = 0; i < bebidas.size(); i++){
 
-                    if (min > bebidas.get(i).getPrecoVenda()){
-                        min = bebidas.get(i).getPrecoVenda();
-                        nomeDaBebida4 = bebidas.get(i).getNome();
+                        if (min > bebidas.get(i).getPrecoVenda()){
+                            min = bebidas.get(i).getPrecoVenda();
+                            nomeDaBebida4 = bebidas.get(i).getNome();
+                        }
+
                     }
 
-                }
+                    JOptionPane.showMessageDialog(null, "Descrição e preço de venda da bebida mais barata: \n" 
+                    + nomeDaBebida4 +"\n"
+                    +"Descrição: " + descricaoDaBebida4 +"\n"
+                    + "Preço de venda: " + min );   
 
-                JOptionPane.showMessageDialog(null, "Descrição e preço de venda da bebida mais barata: \n" 
-                + nomeDaBebida4 +"\n"
-                +"Descrição: " + descricaoDaBebida4 +"\n"
-                + "Preço de venda: " + min );   
+                    break;
 
-                break;
-
-            case "5":
-                
-                for (int i = 0 ; i < bebidas.size(); i++){
-                    if (bebidas.get(i).getEstoque() >= 30)
-                        JOptionPane.showMessageDialog(null, "Bebidas com quantia superior a 30: "+ bebidas.get(i).getNome());                                            
-                }
-                break;
-
-            case "6":
-
-                String nomeBebida = bebidas.get(0).getNome();   
-                for (int i = 0 ; i < bebidas.size(); i++){
-
-                    if (bebidas.get(i).getPrecoVenda() >= 4 && bebidas.get(i).getPrecoVenda() <= 5 ) {
-                        
-                        nomeBebida = bebidas.get(i).getNome();
-                        JOptionPane.showMessageDialog( null, "Bebida: "+ nomeBebida);
-
-                    }                                        
-                }
-                 
-
-                break;
-
-            case "7": // Mostrando os dados de todas as bebidas
-                            
-            String dadosBebidas = "";
-                for (int i = 0; i < bebidas.size(); i++){
-
-                    dadosBebidas = dadosBebidas.concat(bebidas.get(i).getDadosFormatados()) + "\n";
-                    JOptionPane.showMessageDialog(null, dadosBebidas);
+                case "5":
                     
-                }
-                
-                break;
+                    for (int i = 0 ; i < bebidas.size(); i++){
+                        if (bebidas.get(i).getEstoque() >= 30)
+                            JOptionPane.showMessageDialog(null, "Bebidas com quantia superior a 30: "+ bebidas.get(i).getNome());                                            
+                    }
+                    break;
 
-            case "8":
-                loop = false;
-                break;
+                case "6":
+
+                    String nomeBebida = bebidas.get(0).getNome();   
+                    for (int i = 0 ; i < bebidas.size(); i++){
+
+                        if (bebidas.get(i).getPrecoVenda() >= 4 && bebidas.get(i).getPrecoVenda() <= 5 ) {
+                            
+                            nomeBebida = bebidas.get(i).getNome();
+                            JOptionPane.showMessageDialog( null, "Bebida: "+ nomeBebida);
+
+                        }                                        
+                    }
+                    
+
+                    break;
+
+                case "7": // Mostrando os dados de todas as bebidas
+                                
+                String dadosBebidas = "";
+                    for (int i = 0; i < bebidas.size(); i++){
+
+                        dadosBebidas = dadosBebidas.concat(bebidas.get(i).getDadosFormatados()) + "\n";
+                        JOptionPane.showMessageDialog(null, dadosBebidas);
+                        
+                    }
+                    
+                    break;
+
+                case "8":
+                    loop = false;
+                    break;
 
             }
         }
